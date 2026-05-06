@@ -9,7 +9,7 @@ import com.pedeja.api.repository.ClienteRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("/cliente")
 public class ClienteController {
 
     @Autowired

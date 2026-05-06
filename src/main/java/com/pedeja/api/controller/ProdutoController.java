@@ -8,7 +8,7 @@ import com.pedeja.api.repository.ProdutoRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/produto")
 public class ProdutoController {
 
     @Autowired

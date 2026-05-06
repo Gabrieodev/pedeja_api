@@ -3,7 +3,7 @@ package com.pedeja.api.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "Cliente")
 public class Cliente {
 
     @Id
