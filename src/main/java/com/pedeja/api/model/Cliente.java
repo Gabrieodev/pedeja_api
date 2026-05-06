@@ -3,8 +3,8 @@ package com.pedeja.api.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Produto")
-public class Produto {
+@Table(name = "cliente")
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,10 +13,10 @@ public class Produto {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
-    private Double preco;
+    @Column(nullable = false, unique = true)
+    private String email;
 
-    // 🔥 ignorando categoria por enquanto
+    private String endereco;
 
     // getters e setters
 
@@ -32,11 +32,19 @@ public class Produto {
         this.nome = nome;
     }
 
-    public Double getPreco() {
-        return preco;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPreco(Double preco) {
-        this.preco = preco;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 }
