@@ -132,6 +132,31 @@ http://localhost:8080
 
 ## 🧪 Example Endpoints
 
+### Create Customer
+
+#### POST `/cliente`
+
+```json
+{
+  "nome": "Gabriel",
+  "email": "gabriel@email.com",
+  "endereco": "São Paulo"
+}
+```
+
+---
+
+### Create Category
+
+#### POST `/categoria`
+```json
+{
+  "nome": "Massas"
+}
+```
+
+---
+
 ### Create Product
 
 #### POST `/produto`
