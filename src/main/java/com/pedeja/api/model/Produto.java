@@ -3,7 +3,7 @@ package com.pedeja.api.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Produto")
+@Table(name = "produto")
 public class Produto {
 
     @Id
@@ -16,7 +16,10 @@ public class Produto {
     @Column(nullable = false)
     private Double preco;
 
-    // 🔥 ignorando categoria por enquanto
+    // 🔗 RELACIONAMENTO COM CATEGORIA
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
 
     // getters e setters
 
@@ -38,5 +41,13 @@ public class Produto {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
